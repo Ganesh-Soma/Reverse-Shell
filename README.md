@@ -1,7 +1,7 @@
 # Reverse-Shell
 This project contains python scripts to code a reverse shell instead of using automated tools
 
-## Usage
+## Usage 1
 Make sure to be connected to the same network as the victim machine.
 If using VM as a target machine, set the network type to Bridged network.
 
@@ -29,3 +29,9 @@ You should see something like this:
 Shell > 
 
 Hurray! You have set up a reverse shell and are now ready to execute commands on the target!
+
+## Usage 2
+The idea of coding a low level file transfer instead of using protocols (like FTP) is to avoid detection. So, instead of making a new channel and a new connection each time we want to transfer a file, which could bring attention. So, the idea here is to transfer the file within the same channel. 
+To do so, once the reverse shell is obtained, run -> grab*<file_path>
+
+If you want to change the splitter from * to something else, feel free to change the code!  :D
