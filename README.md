@@ -11,7 +11,7 @@ Windows Machine ( Victim Machine )
 
 
 Step 1 : Run the server.py script on the kali(attacker) machine - python3 server.py
-Note: 
+`Note: 
 - Before running the client side script, ping the ip of the attacker to make sure of the connectivity.
 - Also, after running the server side script, run netstat -antp | grep 8080 to check if the listener is up and listening to incoming requests.
 
