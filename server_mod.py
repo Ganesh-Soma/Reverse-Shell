@@ -43,7 +43,7 @@ def upload(conn, command):
         
 def connecting():
     s = socket.socket()
-    s.bind(("192.168.0.152", 8080))
+    s.bind(("192.168.x.x", 8080))
     s.listen(1)
     print('[+] Listening for income TCP connection on port 8080')
     conn, addr = s.accept()
